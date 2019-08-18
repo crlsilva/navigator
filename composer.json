@@ -1,0 +1,29 @@
+{
+  "name": "designcafe/navigator",
+  "description": "Adiciona uma navegação entre páginas para o site/blog",
+  "keywords": [
+    "DesignCafe",
+    "Navigator",
+    "Nav",
+	"crlsilva",
+	"PHP"
+  ],
+  "homepage": "https://www.designcafe.com.br",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Cristiano Silva",
+      "email": "contato@designcafe.com.br",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "ext-gd": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "DesignCafe\\Navigator\\": "src"
+    }
+  }
+}
