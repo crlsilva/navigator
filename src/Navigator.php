@@ -141,17 +141,37 @@ class Navigator
 
         if ($this->rows > $this->limit):
             $navigator = "<nav class=\"{$this->class}\">";
-            $navigator .= ($this->page == 1) ? "<span class=\"{$this->class}_item {$this->class}_active\">{$this->first[1]}</span>" : "<a class='{$this->class}_item' title=\"{$this->first[0]}\" href=\"{$this->link}1{$this->hash}\">{$this->first[1]}</a>";
+            $navigator .= $this->firstPageLink();
             $navigator .= $this->beforePages();
             $navigator .= "<span class=\"{$this->class}_item {$this->class}_active\">{$this->page}</span>";
             $navigator .= $this->afterPages();
-            $navigator .= ($this->page == $this->pages) ? "<span class=\"{$this->class}_item {$this->class}_active\">{$this->last[1]}</span>" : "<a class='{$this->class}_item' title=\"{$this->last[0]}\" href=\"{$this->link}{$this->pages}{$this->hash}\">{$this->last[1]}</a>";
+            $navigator .= $this->lastPageLink();
             $navigator .= "</nav>";
             $navigator .= ($this->total && $this->links ? "<span>Página {$this->page} de {$this->pages}</span>" : '');
             return $navigator;
         endif;
 
         return null;
+    }
+
+    /**
+     * @return string
+     */
+    private function firstPageLink(): string
+    {
+        return ($this->page == 1) ?
+            "<a class='{$this->class}_item' title='{$this->first[0]}' href='#' onclick='return false;'>{$this->first[1]}</a>" :
+            "<a class='{$this->class}_item' title='{$this->first[0]}' href='{$this->link}1{$this->hash}'>{$this->first[1]}</a>";
+    }
+
+    /**
+     * @return string
+     */
+    private function lastPageLink(): string
+    {
+        return ($this->page == $this->pages) ?
+            "<a class='{$this->class}_item' title='{$this->last[0]}' href='#' onclick='return false;'>{$this->last[1]}</a>" :
+            "<a class='{$this->class}_item' title='{$this->last[0]}' href='{$this->link}{$this->pages}{$this->hash}'>{$this->last[1]}</a>";
     }
 
     /**
