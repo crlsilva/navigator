@@ -1,10 +1,10 @@
 <?php
 
-namespace Designcafe\Navigator;
+namespace DesignCafe\Navigator;
 
 /**
  * Class Navigator
- * @package Designcafe\Navigator
+ * @package DesignCafe\Navigator
  */
 class Navigator
 {
@@ -83,7 +83,8 @@ class Navigator
      * @param string|null $hash
      */
     public function pager(int $rows, int $limit = 10, int $page = null, int $links = 7, string $hash = null
-    ): void {
+    ): void
+    {
         $this->rows = $this->toPositive($rows);
         $this->limit = $this->toPositive($limit);
         $this->pages = (int)ceil($this->rows / $this->limit);
