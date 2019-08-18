@@ -11,7 +11,7 @@
 
 ###### Navigation is a handy little component that adds pagination to websites or blogs easily and effectively.
 
-Navigation é um pequeno componente muito prático de usar que acrescenta paginação em sites ou blogs de maneira fácil e eficaz.
+Navigator é um pequeno componente muito prático de usar que acrescenta paginação em sites ou blogs de maneira fácil e eficaz.
 
 Você pode saber mais **[clicando aqui](https://www.designcafe.com.br)**.
 
