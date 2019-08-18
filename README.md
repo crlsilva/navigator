@@ -9,7 +9,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/crlsilva/navigator.svg?style=flat-square)](https://scrutinizer-ci.com/g/crlsilva/navigator)
 [![Total Downloads](https://img.shields.io/packagist/dt/crlsilva/navigator.svg?style=flat-square)](https://packagist.org/packages/ccrlsilva/navigator)
 
-###### Navigation is a handy little component that adds pagination to websites or blogs easily and effectively.
+###### Navigator is a handy little component that adds pagination to websites or blogs easily and effectively.
 
 Navigator é um pequeno componente muito prático de usar que acrescenta paginação em sites ou blogs de maneira fácil e eficaz.
 
